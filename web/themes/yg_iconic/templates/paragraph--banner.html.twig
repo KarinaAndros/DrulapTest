@@ -1,0 +1,23 @@
+<div class="bg-grediunt">
+   <div class="bg-banner-img clip-ellipse" style="background-image: url({{content.field_banner_image.0}});">
+      <div class="ovrllay">
+         <section id="banner" class=" mb-90">
+            <div class="container ">
+               <div class="row">
+                  <!-- #banner-text start -->            
+                  <div id="banner-text" class="col-md-12 text-c text-center ">
+                     <h5 class="wow fadeInUp main-h" data-wow-delay="0.2s" >{{content.field_title.0}}</h5>
+                     <p class="banner-text wow fadeInUp main-h3" data-wow-delay="0.8s">{{content.field_description.0}}</p>
+                     {% if content.field_button_link.0 %}
+                     <div class="top-banner wow fadeInRight">
+                        <a id="#services"  href="{{ content.field_button_link[0]['#url']|render }}" class="btn btn-default  wow fadeInUp  js-scroll-trigger" data-wow-delay="1s" href="#">{{ content.field_button_link[0]['#title']|render }}</a>
+                     </div>
+                     {% endif %}
+                  </div>
+                  <!-- /#banner-text End -->
+               </div>
+            </div>
+         </section>
+      </div>
+   </div>
+</div>         

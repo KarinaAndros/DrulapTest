@@ -1,0 +1,19 @@
+<div class="col-md-4 col-sm-6 p-0">
+                  <div class="pricingTable mt-50">
+                     <div class="pricingTable-header">
+                        <span class="price-value">
+                        <span class="currency">$</span>{{content.field_sub_title.0}}
+                        <span class="month"> /{{content.field_pricing_per.0}}</span>
+                        </span>
+                        <h3 class="heading">{{content.field_title.0}}</h3>
+                     </div>
+                     <div class="pricing-content">
+                        <h2 class="tabel-color">  {{content.field_package_title.0}}  </h2>
+                        <ul>
+                           {{content.field_package_details}}
+                        </ul>
+                        <a href="{{ content.field_button_link[0]['#url']|render }}" class="btn btn-default">
+                        {{ content.field_button_link[0]['#title']|render }}</a>
+                     </div>
+                  </div>
+               </div>

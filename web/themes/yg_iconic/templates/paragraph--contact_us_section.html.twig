@@ -1,0 +1,67 @@
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-heading left">
+                    <h4>{{content.field_title.0}}</h4></div>
+                <div class="contact-form-box margin-30px-top">
+                    <div class="no-margin-lr" id="success-contact-form" style="display: none;"></div>
+                    {{content.field_form.0}}
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-info-box padding-30px-left sm-no-padding">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="contact-info-section no-padding-top margin-10px-top">
+                                <h4>{{content.field_sub_title.0}}</h4>
+                                <p>{{content.field_description.0}}</p>
+                            </div>
+                        </div>
+                        {% if content.field_package_title.0 or content.field_address.0 or content.field_video_url.0 or content.field_email.0 %}
+                        <div class="col-12">
+                            <div class="contact-info-section">
+                                <h4>{{content.field_package_title.0}}</h4>
+                                <ul class="list-style-1 no-margin-bottom">
+                                    {% if content.field_address.0 %}
+                                    <li>
+                                        <p><i class="fa fa-phone text-center"></i> <strong>Address:</strong> {{content.field_address.0}}</p>
+                                    </li>
+                                    {% endif %}
+                                    {% if content.field_video_url.0 %}
+                                    <li>
+                                        <p><i class="fa fa-globe text-center"></i> <strong>Phone:</strong>{{content.field_video_url.0}}</p>
+                                    </li>
+                                    {% endif %}
+                                    {% if content.field_email.0 %}
+                                    <li>
+                                        <p><i class="fa fa-envelope text-center"></i> <strong>Email:</strong> <a href="mailto:{{content.field_email.0}}" class="email_color_site">{{content.field_email.0}}</a></p>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% if content.field_facebook_url.0 %}
+                        <div class="col-12">
+                            <div class="contact-info-section border-none no-padding-bottom no-margin-bottom">
+                                <h4>{{content.field_facebook_url.0}}</h4>
+                                <ul class="list-style-2">
+                                    {{content.field_package_details}}
+                                </ul>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py_map_40">
+   <div class="container-fluid p0">
+      <div id="contatti" class=" maps">
+                        <iframe src="{{content.field_iframe_url .0}}" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                     </div>
+   </div>
+</section>

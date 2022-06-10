@@ -1,0 +1,66 @@
+ {%
+  set classes = [
+    'comment',
+    'js-comment',
+    status != 'published' ? 'comment--' ~ status,
+    comment.owner.anonymous ? 'by-anonymous',
+    author_id and author_id == commented_entity.getOwnerId() ? 'by-' ~ commented_entity.getEntityTypeId() ~ '-author',
+    'clearfix',
+  ]
+
+
+%}
+{% set createdDate = node.getCreatedTime|date('j F Y') %}
+{% if parent %}
+  <ol class="comments">
+    <li class="comment even thread-even depth-1">
+      <ul class="children wow fadeInUp">
+        <li class="comment odd alt">
+          <div class="comment-wrap comment-wrap1">
+            <div class="comment-theme">
+              <div class="comment-image">
+                {{user_picture}}
+              </div>
+            </div>
+            <div class="comment-main-area">
+              <div class="comment-wrapper">
+                <div class="sewl-comments-meta">
+                  <h4>{{ author }} <span class="comments-date">says {{ created }}</span></h4>
+                </div>
+                <div class="comment-area">
+                  <div {{ content_attributes.addClass('comment__content') }} >
+                    {{ content }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ol>
+{% else %}
+  <ol class="comments">
+    <li class="comment even thread-even depth-1">
+      <div class="comment-wrap">
+        <div class="comment-theme">
+          <div class="comment-image">
+            {{user_picture}}
+          </div>
+        </div>
+        <div class="comment-main-area">
+          <div class="comment-wrapper">
+            <div class="sewl-comments-meta">
+              <h4>{{ author }} <span class="comments-date">says {{ created }}</span></h4>
+            </div>
+            <div class="comment-area">           
+              <div {{ content_attributes.addClass('comment__content') }} >
+                {{ content }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ol>
+{% endif %}

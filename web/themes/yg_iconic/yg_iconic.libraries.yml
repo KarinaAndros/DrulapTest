@@ -1,0 +1,24 @@
+global-styling:
+  css:
+    theme:
+      assets/css/bootstrap.min.css: {}
+      assets/vendors/animate/animate.css: {}
+      assets/vendors/font-awesome/css/font-awesome.min.css: {}
+      assets/vendors/owl_carousel/owl.carousel.css: {}
+      assets/css/magnific-popup.css: {}
+      assets/css/style.css: {}
+      assets/css/custom.css: {}
+      'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese': { type: external, minified: true }
+      'https://fonts.googleapis.com/css?family=Montserrat': { type: external, minified: true }
+  js:   
+    assets/js/bootstrap.min.js: {}
+    assets/js/magnific-popup.min.js: {}
+    assets/vendors/animate/wow.min.js: {}
+    assets/vendors/owl_carousel/owl.carousel.min.js: {}
+    assets/js/theme.js: {}
+    
+  dependencies:
+    - core/jquery 
+    - core/drupalSettings
+    - core/modernizr
+    - core/drupal

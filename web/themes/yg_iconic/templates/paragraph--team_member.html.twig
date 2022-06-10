@@ -1,0 +1,22 @@
+<div class="col-md-4 col-sm-6 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                  <div class="team_membar">
+                     <img src="{{content.field_banner_image.0}}" alt="">
+                     <div class="team_content">
+                        <div class=" float-left  ">
+                           <h5 class="name">{{content.field_title.0}}</h5>
+                           <h6>{{content.field_sub_title.0}}</h6>
+                        </div>
+                        <ul>
+                           {% if content.field_facebook_url.0 %}
+                           <li><a href="{{content.field_facebook_url.0}}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                           {% endif %}
+                           {% if content.field_twitter_url.0 %}
+                           <li><a href="{{content.field_twitter_url.0}}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                           {% endif %}
+                           {% if content.field_linkendin_url.0 %}
+                           <li><a href="{{content.field_linkendin_url.0}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                           {% endif %}
+                        </ul>
+                     </div>
+                  </div>
+               </div>
